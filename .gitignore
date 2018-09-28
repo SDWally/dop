@@ -1,0 +1,4 @@
+.git
+.svn
+.idea
+*.pyc
