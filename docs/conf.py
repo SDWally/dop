@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Dopy'
+project = 'Dop'
 copyright = '2018, Wally'
 author = 'Wally'
 
@@ -101,7 +101,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Dopydoc'
+htmlhelp_basename = 'Dopdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -128,7 +128,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Dopy.tex', 'Dopy Documentation',
+    (master_doc, 'Dop.tex', 'Dop Documentation',
      'Wally', 'manual'),
 ]
 
@@ -138,7 +138,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'dop', 'Dopy Documentation',
+    (master_doc, 'dop', 'Dop Documentation',
      [author], 1)
 ]
 
@@ -149,8 +149,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Dopy', 'Dopy Documentation',
-     author, 'Dopy', 'One line description of project.',
+    (master_doc, 'Dop', 'Dop Documentation',
+     author, 'Dop', 'One line description of project.',
      'Miscellaneous'),
 ]
 
