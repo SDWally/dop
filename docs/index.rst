@@ -10,6 +10,10 @@ Welcome to Dop's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   lookpy/intro
+   lookpy/day_read
+   lookpy/fzipline
+   lookpy/tip_need_learn
 
 
 Indices and tables
