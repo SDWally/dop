@@ -47,6 +47,8 @@ linux上的一个工具
 
 - 运行分析　perf stat -e cycles,stalled-cycles-fronted,stalled-cycles-backend,instructions,cache-references,cache-misses,branches,branch-misses,task-clock,faults,minor-faults,cs,migrations -r 3 python xxx.py
 
+- perf list 可查看可使用事件
+
 perf结果解释
 ~~~~~~~~~~~
 
