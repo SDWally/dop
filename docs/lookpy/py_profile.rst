@@ -43,7 +43,7 @@ pref
 
 linux上的一个工具
 
-- 安装　sudo apt install linux-tools-generic
+- 安装　sudo apt install linux-source sudo apt install linux-tools-generic
 
 - 运行分析　perf stat -e cycles,stalled-cycles-fronted,stalled-cycles-backend,instructions,cache-references,cache-misses,branches,branch-misses,task-clock,faults,minor-faults,cs,migrations -r 3 python xxx.py
 
