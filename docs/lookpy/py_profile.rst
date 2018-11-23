@@ -55,6 +55,7 @@ profile可视化
 代码如下：
 
 :: 
+
     # -*- coding: utf-8 -*-
     # !/usr/bin/env python
 
@@ -113,19 +114,19 @@ linux上的一个工具
 perf结果解释
 ~~~~~~~~~~~
 
-task-clock 时钟周期数　单位　ｍｓ
-context-switches 被挂起次数　等待内核操作时（如IO）
-CPU-migrations　被挂起次数　CPU迁移时
-page-faults 缺页小中断次数　发生在内存分配后第一次被使用（延迟分配系统）
-cache-references 引用缓存数据
-cache-miss　缓存失效
-instructions　执行指令数
-insns per cycle 一个时钟周期执行指令数
-stalled-cycles-frontend 等待流水线前端填满指令时钟周期数
-stalled-cycles-backend　等待流水线后端填满指令时钟周期数
-branch　代码执行流程变化
-stalled-cycles　分支预测失效
-branch-miss　分支预测失效
+- task-clock 时钟周期数　单位　ｍｓ
+- context-switches 被挂起次数　等待内核操作时（如IO）
+- CPU-migrations　被挂起次数　CPU迁移时
+- page-faults 缺页小中断次数　发生在内存分配后第一次被使用（延迟分配系统）
+- cache-references 引用缓存数据
+- cache-miss　缓存失效
+- instructions　执行指令数
+- insns per cycle 一个时钟周期执行指令数
+- stalled-cycles-frontend 等待流水线前端填满指令时钟周期数
+- stalled-cycles-backend　等待流水线后端填满指令时钟周期数
+- branch　代码执行流程变化
+- stalled-cycles　分支预测失效
+- branch-miss　分支预测失效
 
 
 补充
