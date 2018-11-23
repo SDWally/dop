@@ -1,9 +1,20 @@
 Python性能分析的几种方法
 ++++++++++++++++++++++++
 
+几种常用的性能分析方法
+---------------------
 
-profile可视化
---------------
+- print 装饰器模式
+- timeit python -m ; timeit -n 5 -r 5 -s "import ..."
+- %timeit
+- /usr/bin/time -p python xx.py
+- python -m cprofile -s cumulative xx.py
+- python -m cprofile -o profile.stats xx.py
+- runsnakerun
+- line_profiler
+- cprofile+pstat+gprof2dot
+- perf
+
 
 line_profiler
 --------------
@@ -16,7 +27,6 @@ line_profiler
 
 - 用kernprof.py来运行代码： kernpref -l -v xxx.py
 
-
 memory_profiler
 ----------------
 
@@ -27,6 +37,57 @@ memory_profiler
 - 装饰器：　使用＠profile 标记选中的函数
 
 - 使用：　python -m memory_profiler xxx.py
+
+profile可视化
+--------------
+
+安装
+~~~~~
+
+- pstats
+- gprof2dot
+
+使用
+~~~~~
+
+- 将sd_profiile装饰在要分析的函数前。
+
+代码如下：
+
+:: 
+    # -*- coding: utf-8 -*-
+    # !/usr/bin/env python
+
+    import sys
+    import cProfile
+    import pstats
+    import os
+
+
+    Do_Profiling = True
+
+
+    def sd_profile(filename):
+        def wrapper(func):
+            def profiled_func(*args, **kwargs):
+                #Do_Profiling = os.getenv("PROFILING")
+                if Do_Profiling:
+                    profile = cProfile.Profile()
+                    profile.enable()
+                    result = func(*args, **kwargs)
+                    profile.disable()
+                    sortby = "tottime"
+                    ps = pstats.Stats(profile).sort_stats(sortby)
+                    #dump to stat file
+                    ps.dump_stats(filename)
+                    #dump to png file
+                    os.system("gprof2dot -f pstats %s | dot -Tpng -o %s.png"%(filename, filename))
+                else:
+                    result = func(*args, **kwargs)
+                return result
+            return profiled_func
+        return wrapper
+
 
 
 更深层次的分析（仅供参考）
