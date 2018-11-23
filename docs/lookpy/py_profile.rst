@@ -44,8 +44,8 @@ profile可视化
 安装
 ~~~~~
 
-- pstats
-- gprof2dot
+- pstats: pip install pstats
+- gprof2dot:  apt install graphviz
 
 使用
 ~~~~~
