@@ -5,7 +5,7 @@ Python性能分析的几种方法
 ---------------------
 
 - print 装饰器模式
-- timeit python -m ; timeit -n 5 -r 5 -s "import ..."
+- timeit python -m xxx.py; timeit -n 5 -r 5 -s "import ..." (n是进行５次，取时间最小，ｒ是每次循环５次，取平均值)
 - %timeit
 - /usr/bin/time -p python xx.py
 - python -m cprofile -s cumulative xx.py
