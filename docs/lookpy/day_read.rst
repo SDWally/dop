@@ -30,5 +30,20 @@ range方法的实现（2.7）
 
 ::
 
-  divisible_by_three = sum((1 for n in list_of_numbers if n % 3 == 0))
+    divisible_by_three = sum((1 for n in list_of_numbers if n % 3 == 0))
+
+线程安全的一种实现方式
+--------------------
+::
+
+    import threading
+    context = threading.local()
+
+
+    def get_algo_instance():
+        return getattr(context, 'algorithm', None)
+
+
+    def set_algo_instance(algo):
+        context.algorithm = algo
 
