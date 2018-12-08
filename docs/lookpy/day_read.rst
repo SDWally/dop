@@ -47,3 +47,17 @@ range方法的实现（2.7）
     def set_algo_instance(algo):
         context.algorithm = algo
 
+一种类特性
+----------
+::
+
+    class classproperty(object):
+        """Class property
+        """
+        def __init__(self, fget):
+            self.fget = fget
+
+        def __get__(self, instance, owner):
+            return self.fget(owner)
+
+
