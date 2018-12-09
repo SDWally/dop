@@ -61,3 +61,15 @@ range方法的实现（2.7）
             return self.fget(owner)
 
 
+定义接口
+--------
+::
+
+    import abc
+
+    from six import with_metaclass
+
+　　　class AbstractAccount(with_metaclass(abc.ABCMeta)):
+
+
+
