@@ -71,5 +71,7 @@ range方法的实现（2.7）
 
 　　　class AbstractAccount(with_metaclass(abc.ABCMeta)):
 
+新语法
+------
 
-
+@object.__new__
