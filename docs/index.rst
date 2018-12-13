@@ -6,6 +6,9 @@
 Welcome to Dop's documentation!
 ================================
 
+Dop, a project for learning python skills.
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -14,6 +17,10 @@ Welcome to Dop's documentation!
    lookpy/day_read
    lookpy/fzipline
    lookpy/tip_need_learn
+   lookpy/py_to_c
+   lookpy/learn_click
+   lookpy/py_profile
+   lookpy/optimize_method
 
 
 Indices and tables
