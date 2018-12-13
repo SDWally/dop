@@ -134,3 +134,33 @@ Example B
     @click.option('-s', '--string-to-echo', 'string')
     def echo(string):
         click.echo(string)
+
+Value Options
+~~~~~~~~~~~~~~~
+
+::
+
+    #Set a default value
+    @click.command()
+    @click.option('--n', default=1)
+    def dots(n):
+        click.echo('.' * n)
+
+::
+
+    # Show the default
+    @click.command()
+    @click.option('--n', default=1, show_default=True)
+    def dots(n):
+        click.echo('.' * n)
+
+
+::
+
+    # Make an option required
+    @click.command()
+    @click.option('--n', required=True, type=int)
+    def dots(n):
+        click.echo('.' * n)
+
+
