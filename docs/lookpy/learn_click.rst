@@ -345,4 +345,4 @@ More Options
     Dropped all tables!
 
 
-For more information about these changes see: https://click.palletsprojects.com/en/7.x/
+For more information please see: https://click.palletsprojects.com/en/7.x/
