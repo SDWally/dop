@@ -26,15 +26,17 @@ python快速创建命令行的一个第三方模块
    if __name__ == '__main__':
        learn_click()
 
-然后在命令行可以查看帮助
+在命令行查看帮助
+
 ::
 
-　　python learn_click_demo.py --help
+ 　　python learn_click_demo.py --help
 
 使用
+
 ::
 
-　　python learn_click_demo.py --name wally
+　 　python learn_click_demo.py --name wally
 
 Command
 ----------
