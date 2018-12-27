@@ -14,4 +14,7 @@ itertools的islice
 linecache库
 --------------
 
+heapq库
+-------
+
 
