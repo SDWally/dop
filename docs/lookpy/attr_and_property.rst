@@ -84,6 +84,8 @@ Python中的属性与特性
 
 主动计算
 
+::
+
     class Asset:
 
         def __init__(self):
