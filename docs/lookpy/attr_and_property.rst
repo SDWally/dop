@@ -84,42 +84,42 @@ Python中的属性与特性
 
 主动计算
 
-class Asset:
+    class Asset:
 
-    def __init__(self):
-        self._money = 0
-        self._market_money = 0
-        self._total = 0
-        
-    def add_money(self, money):
-        self._money += money
-        self._update_total()
-        
-    def total(self):
-        return self._total
+        def __init__(self):
+            self._money = 0
+            self._market_money = 0
+            self._total = 0
 
-    def _update_total(self):
-        self._total = self._money + self._market_money
+        def add_money(self, money):
+            self._money += money
+            self._update_total()
+
+        def total(self):
+            return self._total
+
+        def _update_total(self):
+            self._total = self._money + self._market_money
 
 
 被动计算
 
 ::
 
-class Asset:
+    class Asset:
 
-    def __init__(self):
-        self._money = 0
-        self._market_money = 0
-        self._total = 0
-        
-    def add_money(self, money):
-        self._money += money
-        
-    @property
-    def total(self):
-        self._total = self._money + self._market_money
-        return self._total
+        def __init__(self):
+            self._money = 0
+            self._market_money = 0
+            self._total = 0
+
+        def add_money(self, money):
+            self._money += money
+
+        @property
+        def total(self):
+            self._total = self._money + self._market_money
+            return self._total
     
 对于主动计算与被动计算的处理：
 
