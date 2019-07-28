@@ -7,6 +7,15 @@
 函数
 ------
 
+1. 编译后的函数定义体保存在函数的哪个属性中？
+
+__code__
+
+2. 闭包中自由变量的绑定在函数的什么属性中？这一属性是什么数据类型？
+
+__closure__ list
+
+3.
 
 
 装饰器
@@ -24,6 +33,8 @@ functools.wraps functools.lru_cache functools.singledispatch
 
 类
 ------
+
+
 
 元类
 ------
