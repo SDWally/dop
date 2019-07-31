@@ -45,3 +45,10 @@ functools.wraps functools.lru_cache functools.singledispatch
 设计模式
 ---------
 
+其他
+-------
+
+1. 关于is的考察。
+
+每个变量都有标识/类型和值。对象一旦创建，它的标识绝不会变。可以把标识理解为对象在内存中的地址。
+
