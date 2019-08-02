@@ -18,6 +18,25 @@ def problem1():
     pass
 
 
-
+def problem2():
+    """
+    可变与不可变
+    >>> def f(a, b):
+    ...     a += b
+    ...     return a
+    ...
+    >>> x = 1
+    >>> y = 2
+    >>> f(x, y)
+    3
+    >>> x, y
+    (1, 2)
+    >>> a = [1, 2]
+    >>> b = [3, 4]
+    >>> f(a, b)
+    [1, 2, 3, 4]
+    :return:
+    """
+    pass
 
 
