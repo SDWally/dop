@@ -1,5 +1,4 @@
-six包与py2/py3的兼容性
-=========================
+# six包与py2/py3的兼容性
 
 Six provides simple utilities for wrapping over differences between Python 2 and Python 3.
 
