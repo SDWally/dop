@@ -1,6 +1,6 @@
-@heavysheep 博客素材
+引用自heavysheep 博客素材，由Wally删减
 
-改善 Python 程序的 91 个建议
+改善 Python 程序的 91 个建议之务必版
 
 第 1 章 引论
 建议 1：理解 Pythonic 概念
@@ -44,7 +44,7 @@ list(reversed(a))   # 推荐
 
 全面掌握 python 提供的特性，包括语言和库
 随着时间推移，要不断更新知识
-深入学习业界公认的 pythoni 代码
+深入学习业界公认的 pythonic 代码
 编写符合 pep8 的代码规范（就是让你使用pycharm）
 建议 3：理解 Python 与 C 语言的不同之处
 Python 使用代码缩进的方式来分割代码块，不要混用 Tab 键和空格
@@ -78,38 +78,7 @@ def readfile(filename, log):    # 第二版本
     pass
 def readfile(filename, logger=logger.info):     # 合理的设计
     pass
-最后还有个函数可读性良好的例子：
 
-def GetContent(ServerAdr, PagePath):
-    http = httplib.HTTP(ServerAdr)
-    http.putrequest('GET', PagePath)
-    http.putheader('Accept', 'text/html')
-    http.putheader('Accept', 'text/plain')
-    http.endheaders()
-    httpcode, httpmsg, headers = http.getreply()
-    if httpcode != 200:
-        raise "Could not get document: Check URL and Path."
-    doc = http.getfile()
-    data = doc.read()       # 此处是不是应该使用 with ？
-    doc.close
-    return data
-def ExtractData(inputstring, start_line, end_line):
-    lstr = inputstring.splitlines()             # split
-    j = 0
-    for i in lstr:
-        j += 1
-        if i.strip() == start_line: slice_start = j
-        elif i.strip() == end_line: slice_end = j
-    return lstr[slice_start:slice_end]
-def SendEmail(sender, receiver, smtpserver, username, password, content):
-    subject = "Contented get from the web"
-    msg = MIMEText(content, 'plain', 'utf-8')
-    msg['Subject'] = Header(subject, 'utf-8')
-    smtp = smtplib.SMTP()
-    smtp.connect(smtpserver)
-    smtp.login(username, password)
-    smtp.sendmail(sender, receiver, msg.as_string())
-    smtp.quit()
 建议 7：将常量集中到一个文件
 在Python中应当如何使用常量：
 
@@ -138,6 +107,7 @@ const.MY_FORTH_CONSTANT = 'b'
 
 from constant import const
 print(const.MY_CONSTANT)
+
 第 2 章 编程惯用法
 建议 8：利用 assert 语句来发现问题
 断言的判断会对性能有所影响，因此要分清断言的使用场合：
@@ -187,8 +157,6 @@ def fib():
     while True:
         yield a
         a, b = b, a + b
-建议 11：理解枚举替代实现的缺陷
-使用 flufl.enum 实现枚举
 
 建议 12：不推荐使用 type 来进行类型检查
 使用 isinstance 来进行类型检查（注意上下包含关系就行）
