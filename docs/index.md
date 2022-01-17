@@ -1,31 +1,32 @@
-.. Dop documentation master file, created by
-   sphinx-quickstart on Sat Sep 29 00:31:58 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+# 文档说明
 
-Welcome to Dop's documentation!
-================================
+## 文档主要部分
 
-Dop, a project for learning python skills.
+### cell  
 
+- 架构知识
+- 专注整体性组织方式和具体点的组织原则定义
+- 场景与技术的参考
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+### learn
 
-   lookpy/intro
-   lookpy/day_read
-   lookpy/fzipline
-   lookpy/tip_need_learn
-   lookpy/py_to_c
-   lookpy/learn_click
-   lookpy/py_profile
-   lookpy/optimize_method
+- 学习备忘
+- 学习参考
 
+### project
 
-Indices and tables
-==================
+- 项目管理
+- 项目实践
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+### python_d
+
+- 语言基础
+- 基于语言的程序设计
+
+### tech
+
+- 通用技术
+- 开发技术
+- 部署技术
+- 监控技术
+- 服务管理技术
