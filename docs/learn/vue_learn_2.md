@@ -2,12 +2,13 @@
 
 ## 学习汇报
 
-1. 已完成-vue页面布局了解/项目添加布局模块/
+1. 已完成-vue页面路由了解/布局了解/新增页面及路由到组件/新增布局模块
 2. 两周计划-vue官方文档第二遍/css布局部分/项目添加登录及个人信息展示/板块管理后台-功能需求
 
 ### 理论学习
 
-- 开源项目管理后台 vue-element-admin-layout部分
+- 开源后台 vue-element-admin router部分
+- 开源后台 vue-element-admin layout部分
 
 ### 实践
 
