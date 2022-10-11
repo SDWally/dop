@@ -13,9 +13,7 @@
           - JavaScript
         - 技术
           - 开发
-            - 工具
-              - Git
-              - Pycharm
+            - 无
           - 后端
             - Django
             - Flask
@@ -34,8 +32,8 @@
             - Zabbix
           - 测试
             - 无
-        - 架构
-          - 
+          - 架构
+            - 无
       - 产品设计（todo）
       - 社区
         - github
@@ -70,7 +68,9 @@
         - 招聘
       - 技术
       - 效率
-    - 软件
+    - 工具
+      - Git
+      - Pycharm
       - PPT
       - Word
       - Excel
