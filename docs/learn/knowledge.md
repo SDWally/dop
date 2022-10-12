@@ -63,10 +63,11 @@
       - 技术
       - 效率
     - 工具
-      - 通用办公
+      - 通用
         - PPT
         - Word
         - Excel
+        - KeePassX
       - 专业工具
          - Git
          - Pycharm
