@@ -11,7 +11,9 @@
           - python
           - golang
           - JavaScript
-        - 技术
+        - 算法
+          - 无
+        - 工程
           - 后端
             - Django
             - Flask
