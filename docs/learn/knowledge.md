@@ -12,10 +12,6 @@
           - golang
           - JavaScript
         - 技术
-          - 开发
-            - 工具
-              - Git
-              - Pycharm
           - 后端
             - Django
             - Flask
@@ -34,15 +30,11 @@
             - Zabbix
           - 测试
             - 无
-        - 架构
-          - 
-      - 产品设计（todo）
-      - 社区
-        - github
-        - csdn
-        - 
+          - 架构
+            - 无
+          - 产品设计（todo）
     - 金融
-      - 量化策略
+      - 量化策略（todo）
     - 英语
       - 雅思（todo）
   - 管理
@@ -70,10 +62,14 @@
         - 招聘
       - 技术
       - 效率
-    - 软件
-      - PPT
-      - Word
-      - Excel
+    - 工具
+      - 通用办公
+        - PPT
+        - Word
+        - Excel
+      - 专业工具
+         - Git
+         - Pycharm
   - 创业
     - 无
 - 生活
@@ -98,7 +94,9 @@
       - 跑跑卡丁车
       - 英雄联盟
       - 和平精英
-
+    - 社区
+      - github
+      - csdn
 ```
 
 ## 核心技能
