@@ -1,20 +1,13 @@
-click模块简介
-++++++++++++++
+# click模块简介
 
 python快速创建命令行的一个第三方模块
 
-安装
-------
-::
+## 安装
 
    pip install click
 
-
-使用示例
----------
-::
-
-   # file: learn_click_demo.py
+## 使用示例
+```   
    import click
    @click.command()
    @click.option('--name', help="The name")
@@ -25,26 +18,19 @@ python快速创建命令行的一个第三方模块
 
    if __name__ == '__main__':
        learn_click()
-
+```
 在命令行查看帮助
-
-::
-
+```
  　　python learn_click_demo.py --help
-
+```
 使用
-
-::
-
+```
   python learn_click_demo.py --name wally
+```
 
+## Command
 
-Command
-----------
-
-Creating a Command
-~~~~~~~~~~~~~~~~~~~~~
-::
+### Creating a Command
 
     import click
 
@@ -52,10 +38,7 @@ Creating a Command
     def hello():
         click.echo('Hello World!')
 
-
-Nesting Command
-~~~~~~~~~~~~~~~~~
-::
+### Nesting Command
 
     @click.group()
     def cli():
@@ -72,12 +55,9 @@ Nesting Command
     cli.add_command(initdb)
     cli.add_command(dropdb)
 
-Parameters
------------
+### Parameters
 
-add parameters
-~~~~~~~~~~~~~~~~~
-::
+### add parameters
 
     @click.command()
     @click.option('--count', default=1, help='number of greetings')
@@ -86,8 +66,7 @@ add parameters
         for x in range(count):
             click.echo('Hello %s!' % name)
 
-parameters type
-~~~~~~~~~~~~~~~~~
+### parameters type
 
 - str
 - int
@@ -101,8 +80,8 @@ parameters type
 - click.FloatRange
 - click.DateTime
 
-parameters name
-~~~~~~~~~~~~~~~~
+### parameters name
+
 - For an option with ('-f', '--foo-bar'), the parameter name is foo_bar.
 
 - For an option with ('-x',), the parameter is x.
@@ -113,14 +92,11 @@ parameters name
 
 - For an arguments with (`foogle`), the parameter name is foogle.
 
-Options
----------
+### Options
 
-Name Options
-~~~~~~~~~~~~~~
+#### Name Options
 
 Example A
-::
 
     @click.command()
     @click.option('-s', '--string-to-echo')
@@ -128,17 +104,13 @@ Example A
         click.echo(string_to_echo)
 
 Example B
-::
 
     @click.command()
     @click.option('-s', '--string-to-echo', 'string')
     def echo(string):
         click.echo(string)
 
-Value Options
-~~~~~~~~~~~~~~~
-
-::
+#### Value Options
 
     # Set a default value
     @click.command()
@@ -146,16 +118,11 @@ Value Options
     def dots(n):
         click.echo('.' * n)
 
-::
-
     # Show the default
     @click.command()
     @click.option('--n', default=1, show_default=True)
     def dots(n):
         click.echo('.' * n)
-
-
-::
 
     # Make an option required
     @click.command()
@@ -163,15 +130,11 @@ Value Options
     def dots(n):
         click.echo('.' * n)
 
-::
-
     # More than one argument
     @click.command()
     @click.option('--pos', nargs=2, type=float)
     def findme(pos):
         click.echo('%s / %s' % pos)
-
-::
 
     #　Tuples as Multi Value Options
     @click.command()
@@ -179,15 +142,11 @@ Value Options
     def putitem(item):
         click.echo('name=%s id=%d' % item)
 
-::
-
     #　Tuples as Multi Value Options in another way
     @click.command()
     @click.option('--item', nargs=2, type=click.Tuple([str, int]))
     def putitem(item):
         click.echo('name=%s id=%d' % item)
-
-::
 
     # Multiple Options
     @click.command()
@@ -200,8 +159,6 @@ Value Options
     foo
     bar
 
-::
-
     # Counting
     @click.command()
     @click.option('-v', '--verbose', count=True)
@@ -212,7 +169,6 @@ Value Options
     $ log -vvv
     Verbosity: 3
 
-::
 
     # Boolean Flags
     import sys
@@ -231,10 +187,8 @@ Value Options
     linux
 
 
-More Options
---------------
+### More Options
 
-::
 
     # Feature Switches
     import sys
@@ -252,8 +206,6 @@ More Options
     linux
     $ info
     LINUX
-
-::
 
     # Choice Options
     @click.command()
@@ -277,7 +229,6 @@ More Options
       --hash-type [md5|sha1]
       --help                  Show this message and exit.
 
-::
 
     # Password Prompts
     @click.command()
@@ -286,7 +237,6 @@ More Options
     def encrypt(password):
         click.echo('Encrypting password to %s' % password.encode('rot13'))
 
-::
 
     # Password Prompts in another way
     @click.command()
@@ -294,7 +244,6 @@ More Options
     def encrypt(password):
         click.echo('Encrypting password to %s' % password.encode('rot13'))
 
-::
 
     # Dynamic Defaults for Prompts
     @click.command()
@@ -304,7 +253,6 @@ More Options
     def hello(username):
         print("Hello,", username)
 
-::
 
     # Callbacks and Eager Options
     def print_version(ctx, param, value):
@@ -324,7 +272,6 @@ More Options
     $ hello --version
     Version 1.0
 
-::
 
     # Yes Parameters
     def abort_if_false(ctx, param, value):
