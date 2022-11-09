@@ -9,7 +9,7 @@
       - 编程
         - 语言
           - python
-          - golang
+          - golang（todo）
           - JavaScript
         - 算法
           - 无
@@ -25,6 +25,9 @@
             - Kafka
             - ElasticSearch
             - Clickhouse
+          - 爬虫
+            - scrapy
+            - splash
           - 运维
             - Linux
             - Docker
@@ -33,8 +36,9 @@
           - 测试
             - 无
           - 架构
+            - todo
+          - 产品设计
             - 无
-          - 产品设计（todo）
     - 金融
       - 量化策略（todo）
     - 英语
@@ -85,9 +89,6 @@
         - 生活日志
   - 摄影
     - 人像
-  - 音乐
-    - 古琴
-    - 唱歌
   - 通用
     - 驾驶
       - 小汽车
@@ -113,7 +114,6 @@
 
 ```
 - 摄影
-- 古琴
 - 英语
 - 管理
 ```
