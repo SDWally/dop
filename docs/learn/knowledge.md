@@ -8,8 +8,8 @@
     - 计算机   
       - 编程
         - 语言
-          - python
-          - golang（todo）
+          - Python
+          - Golang（todo）
           - JavaScript
         - 算法
           - 无
@@ -33,6 +33,7 @@
             - Docker
             - K8s
             - Zabbix
+            - Stern
           - 测试
             - 无
           - 架构
