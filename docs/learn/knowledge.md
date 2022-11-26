@@ -4,48 +4,46 @@
 
 ```
 - 工作
-  - 专业
+  - 技术
     - 计算机   
       - 编程
         - 语言
           - Python
           - Golang（todo）
           - JavaScript
-        - 算法
-          - 无
         - 工程
           - 后端
             - Django
             - Flask
+            - Numpy
+            - Pandas
           - 前端 
             - Vue  
-          - 数据
+          - 组件
             - Mysql
             - Redis
             - Kafka
             - ElasticSearch
             - Clickhouse
           - 爬虫
-            - scrapy
-            - splash
+            - Scrapy
+            - Splash
           - 运维
             - Linux
+            - Nginx
             - Docker
-            - K8s
+            - Kubernetes
+            - Airflow
             - Zabbix
             - Stern
-          - 测试
-            - 无
           - 架构
             - todo
-          - 产品设计
-            - 无
     - 金融
       - 量化策略（todo）
     - 英语
       - 雅思（todo）
   - 管理
-    - 个人管理
+    - 个人
       - 技术
         - 专业技术
         - 管理技术
@@ -53,12 +51,12 @@
         - 会议
         - 开发
         - 管理
-    - 项目管理
+    - 项目
       - 计划
       - 人员
       - 质量
       - 风险
-    - 部门管理
+    - 部门
       - 会议
       - 实施
         - 
@@ -77,9 +75,12 @@
         - KeePassX
       - 专业工具
          - Git
+         - Vim
          - Pycharm
-  - 创业
-    - 无
+         - Cmder
+         - Xshell
+         - Filezilla
+         - Navicat
 - 生活
   - 学习
     - 读书
@@ -96,7 +97,6 @@
     - 厨艺
       - 无
     - 游戏
-      - 跑跑卡丁车
       - 英雄联盟
       - 和平精英
     - 社区
@@ -115,7 +115,7 @@
 
 ```
 - 摄影
-- 英语
+- 英语(todo)
 - 管理
 ```
 
