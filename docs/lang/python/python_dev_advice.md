@@ -1,6 +1,6 @@
-引用自heavysheep 博客素材，由Wally删减
+# 改善 Python 程序的 91 个建议之务必版
 
-改善 Python 程序的 91 个建议之务必版
+引用自heavysheep 博客素材，由Wally删减
 
 第 1 章 引论
 建议 1：理解 Pythonic 概念
