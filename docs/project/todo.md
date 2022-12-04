@@ -1,5 +1,9 @@
 # 项目技术的todo list
 
+## Python实践
+
+- 基于redis hyperloglog 编写网站访问统计代码实现
+
 ## 投资参考页面前端
 
 - 普通选股器研发
