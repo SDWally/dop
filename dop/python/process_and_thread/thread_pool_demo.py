@@ -1,5 +1,14 @@
 # Python实现一个线程池
 
+"""
+线程池整体实现原理
+
+需要启动四个独立线程，死循环读取任务，任务完毕后，有回调则执行回调
+注意线程状态管理，启动，停止，终止
+
+
+"""
+
 import queue
 import threading
 import time
