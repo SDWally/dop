@@ -1,13 +1,18 @@
 # 项目技术的todo list
 
-## Python实践
+## 因子分析功能
 
-- 基于redis hyperloglog 编写网站访问统计代码实现
+## 回测功能
 
 ## 投资参考页面前端
 
 - 普通选股器研发
 - 超级选股器功能(参考bigquant的产品页面，进行高度简单易用的个人选股器定制)
+
+## Python实践
+
+- 基于redis hyperloglog 编写网站访问统计代码实现
+- Python学习网- 做中文最好的Python学习教程网站
 
 ### 学习与行动
 
