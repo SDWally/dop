@@ -42,7 +42,8 @@ async def main():
     # Wait until both tasks are completed (should take
     # around 2 seconds.)
     await task1
-    await task2
+    await task1
+    # await task2
 
     print(f"finished at {time.strftime('%X')}")
 

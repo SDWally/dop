@@ -1,5 +1,7 @@
 # Dop Documentations
 
+学习没有秘密。
+
 ## 简介
 
 - 项目命名： 因作者是从Python开发者开始职业道路的，取do结合python的首字母，是为dop.
