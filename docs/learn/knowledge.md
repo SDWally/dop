@@ -17,7 +17,7 @@
             - Numpy
             - Pandas
           - 前端 
-            - Vue  
+            - Vue(doing)  
           - 组件
             - Mysql
             - Redis
