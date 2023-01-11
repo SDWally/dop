@@ -9,7 +9,10 @@
       - 编程
         - 语言
           - Python
-          - JavaScript（todo）
+          - C++ (todo)    
+          - JavaScript (todo)
+          - Go (todo)
+          - Java (todo)
         - 工程
           - 后端
             - Django
