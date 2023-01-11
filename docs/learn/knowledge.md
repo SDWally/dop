@@ -9,8 +9,8 @@
       - 编程
         - 语言
           - Python
-          - C++ (todo)    
-          - JavaScript (todo)
+          - C++ (todo)          
+          - JavaScript (todo)    
           - Go (todo)
           - Java (todo)
         - 工程
