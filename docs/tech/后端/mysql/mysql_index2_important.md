@@ -154,3 +154,52 @@ key：MySQL 实际选用的索引
 - 尽量使用覆盖索引
 - 索引列 尽量不使用 不等于（!= / <>）条件、通配符开头的模糊查询（like %abc）、or 作为连接条件
 - 字符串加单引号（不加可能会发生索引列的隐式转换，导致索引失效）
+
+## in操作是否走索引
+
+- IN 通常是走索引的，当IN后面的数据在数据表中超过30%的匹配时是全表的扫描，不会走索引，因此IN走不走索引与后面的数据量有关系！
+- 使用 IN 查询的参数如果是固定时;SELECT * FROM 表名 WHERE ( 查询字段 = 固定参数1 OR 查询字段 = 固定参数2 ) 这样的效率是最高的；
+- 如果查询的参数集合比较大时建议使用 EXISTS 代替 IN 查询，效率会高很多
+
+## 使用EXISTS代替IN
+
+- from https://blog.csdn.net/S_ZaiJiangHu/article/details/119417926
+
+　　假如有一个表user，它有两个字段id和name，我们要查询名字中带a的用户信息：
+　　最简单的SQL：select * from user where name like ‘%a%’;
+　　使用IN的SQL：select u.* from user u where u.id in (select uu.id from user uu where uu.name like ‘%a%’);
+　　我们现在将使用IN的SQL修改为使用EXISTS的SQL该怎么写呢？
+　　一开始我直接将u.id in 替换为EXISTS，获得如下语句 ：
+　　　　select u.* from user u where exists(select uu.id from user uu where uu.name like ‘%a%’);
+　　经过测试发现输出结果错误，该语句将所有的用户全部一个不漏的查询出来了，相信你也发现了问题，后来我对上述语句做了修改如下：
+　　　　select u.* from user u where exists (select uu.id from user uu where uu.name like ‘%a%’ and uu.id=u.id);
+
+## 何时使用exists代替in
+
+- from https://www.cnblogs.com/xianlei/p/8862313.html
+
+mysql中的in语句是把外表和内表作hash 连接，而exists语句是对外表作loop循环，每次loop循环再对内表进行查询。一直大家都认为exists比in语句的效率要高，这种说法其实是不准确的。这个是要区分环境的。
+ 
+
+如果查询的两个表大小相当，那么用in和exists差别不大。 
+如果两个表中一个较小，一个是大表，则子查询表大的用exists，子查询表小的用in： 
+例如：表A（小表），表B（大表）
+ 
+1：
+select * from A where cc in (select cc from B) 效率低，用到了A表上cc列的索引；
+ 
+select * from A where exists(select cc from B where cc=A.cc) 效率高，用到了B表上cc列的索引。 
+相反的
+ 
+2：
+select * from B where cc in (select cc from A) 效率高，用到了B表上cc列的索引；
+ 
+select * from B where exists(select cc from A where cc=B.cc) 效率低，用到了A表上cc列的索引。
+ 
+ 
+not in 和not exists如果查询语句使用了not in 那么内外表都进行全表扫描，没有用到索引；而not extsts 的子查询依然能用到表上的索引。所以无论那个表大，用not exists都比not in要快。 
+in 与 =的区别 
+select name from student where name in ('zhang','wang','li','zhao'); 
+与 
+select name from student where name='zhang' or name='li' or name='wang' or name='zhao' 
+的结果是相同的。
