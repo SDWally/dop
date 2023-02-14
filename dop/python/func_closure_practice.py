@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 
-# learn the closure in python
+# 学习参考 the closure in python
 # 计算移动平均数的高阶函数
 
 
