@@ -22,3 +22,7 @@
 
 - 重新实现一个Flask
 - 重新实现一个tersflow
+
+## 开一个Python面试专场 可以考虑短视频
+
+- Python面试题 Python面试教育
