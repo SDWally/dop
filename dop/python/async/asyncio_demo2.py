@@ -1,8 +1,11 @@
+import time
 import asyncio
 
 
 async def worker():
     print("enter worker")
+    # await
+    # return
     await asyncio.sleep(5)
     print("finish worker")
 
