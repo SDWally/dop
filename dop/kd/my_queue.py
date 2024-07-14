@@ -78,3 +78,4 @@ class MyQueue:
         insertion_index = binary_search_insertion_index(self.data_list, id)
         if insertion_index != len(self.data_list) and self.data_list[insertion_index] == id:
             del self.data_list[insertion_index]
+            del self.lifetime_list[insertion_index]
