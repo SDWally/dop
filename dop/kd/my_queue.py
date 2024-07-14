@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 
 def binary_search_insertion_index(arr: list, target: int):
     """

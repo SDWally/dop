@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import unittest
 from my_queue import binary_search_insertion_index
 
