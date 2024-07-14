@@ -9,6 +9,8 @@ class Broker(BaseBroker):
     def __init__(self):
         self.ask_book = []  # 卖
         self.bid_book = []  # 买
+        self.ask_price_list = []
+        self.bid_price_list = []
         self.ask_book_map = {}
         self.bid_book_map = {}
         self.min_ask_price = None
@@ -106,8 +108,21 @@ class Broker(BaseBroker):
             quote_type (str): Required.
             reverse (bool): Optional, default is True.
         """
-        book_tuple = [(price, volume) for price, volume in book_map.items() if volume > 0.]
-        return [(quote_type + str(i + 1), price, volume) for i, (price, volume) in enumerate(sorted(book_tuple, key=lambda x: x[0], reverse=reverse)[:level])]
+        # book_tuple = [(price, volume) for price, volume in book_map.items() if volume > 0.]
+        # return [(quote_type + str(i + 1), price, volume) for i, (price, volume) in enumerate(sorted(book_tuple, key=lambda x: x[0], reverse=reverse)[:level])]
+        book_tuple = heapq.nsmallest(len(book_map), book_map)
+        book_list = []
+        i = 1
+        price_set = set([])
+        for property_key, (price, volume) in book_tuple:
+            if price in price_set:
+                continue
+            else:
+                book_list.append(((quote_type + str(i + 1), price, volume)))
+                i += 1
+                if i == level + 1:
+                    return book_list
+        return book_list
 
     def order_book(self, level: int = 5, **kwargs):
         """
@@ -116,7 +131,8 @@ class Broker(BaseBroker):
         Args:
             level (int): Optional, N-level, default is 5.
         """
-        return self._gen_order_book(self.ask_book_map, level, "ask", False) + self._gen_order_book(self.bid_book_map, level, "bid", True)
+        # return self._gen_order_book(self.ask_book_map, level, "ask", False) + self._gen_order_book(self.bid_book_map, level, "bid", True)
+        return self._gen_order_book(self.ask_book, level, "ask", False) + self._gen_order_book(self.bid_book, level, "bid", True)
 
 
 if __name__ == "__main__":
@@ -126,10 +142,12 @@ if __name__ == "__main__":
         text_str = f.read()
     line_list = text_str.split()
     order_list = [line.split(",") for line in line_list[1:]]
+    # print(order_list)
     broker_ins = Broker()
     n = 0
     for order in order_list:
         broker_ins.transact(tuple(order))
         broker_ins.order_book(1)
+
     use_time = time.time() - start_time
     print(use_time)
