@@ -97,6 +97,15 @@ class Broker(BaseBroker):
 
     @staticmethod
     def _gen_order_book(book_map, level, quote_type, reverse=True):
+        """
+        gen Order book: for ask book or bid book.
+
+        Args:
+            book_map (dict): Required.
+            level (int): Required.
+            quote_type (str): Required.
+            reverse (bool): Optional, default is True.
+        """
         book_tuple = [(price, volume) for price, volume in book_map.items() if volume > 0.]
         return [(quote_type + str(i + 1), price, volume) for i, (price, volume) in enumerate(sorted(book_tuple, key=lambda x: x[0], reverse=reverse)[:level])]
 
