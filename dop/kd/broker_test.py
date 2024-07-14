@@ -18,7 +18,7 @@ class SearchTest(unittest.TestCase):
         n = 0
         for order in order_list:
             broker_ins.transact(tuple(order))
-            broker_ins.order_book()
+            print(broker_ins.order_book(1))
 
         use_time = time.time() - start_time
         print(use_time)
