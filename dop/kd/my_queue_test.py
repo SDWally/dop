@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 import unittest
-from my_queue import binary_search_insertion_index
+from .my_queue import binary_search_insertion_index, MyQueue
+import time
 
 
 class SearchTest(unittest.TestCase):
@@ -17,3 +18,17 @@ class SearchTest(unittest.TestCase):
         elif arr[insertion_index] == target:
             del arr[insertion_index]
         print(arr)
+
+
+class MyQueueTest(unittest.TestCase):
+
+    def test_my_queue_push(self):
+        start_time = time.time()
+        mq = MyQueue(lifetime=5)
+        for i in range(10000):
+            mq.push(time.time(), i)
+            print(mq.query_length(time.time()))
+        # for i in range(10000):
+        mq.remove(-1)
+        print(mq.query_length(time.time()))
+        print(time.time() - start_time)
