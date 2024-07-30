@@ -86,9 +86,11 @@ def readfile(filename, logger=logger.info):     # 合理的设计
 将存放常量的文件命名为constant.py
 示例为：
 
+
 class _const:
     class ConstError(TypeError): pass
     class ConstCaseError(ConstError): pass
+
     def __setattr__(self, name, value):
         if self.__dict__.has_key(name):
             raise self.ConstError, "Can't change const.%s" % name

@@ -7,6 +7,9 @@
 - ControllerManager
 - Etcd
 
+- kubectl
+- kubelet
+- kubeadm
 
 ##
 
