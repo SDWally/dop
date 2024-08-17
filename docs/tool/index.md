@@ -7,6 +7,14 @@
 
 ## 专业
 
+### ssh
+
+- winscp
+- xshell
+- git bash
+- mobaterminal
+- termius
+
 ## 文档
 
 ### markdown
